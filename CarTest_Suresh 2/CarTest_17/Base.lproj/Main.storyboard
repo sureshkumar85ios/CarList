@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sW6-fw-waf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="CarTest_17" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V66-4g-1FY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="bju-Vc-anI" customClass="MyFooter" customModule="CarTest_17" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="142" width="375" height="72"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Guy-57-JVq">
+                                            <rect key="frame" x="20" y="12" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </activityIndicatorView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJd-gO-7cy">
+                                            <rect key="frame" x="58" y="11" width="77" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <outlet property="activityIndicator" destination="Guy-57-JVq" id="kkx-vg-5YD"/>
+                                    </connections>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CarsTableViewCell" id="z5K-VJ-X3l" customClass="carListTableViewCell" customModule="CarTest_17" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z5K-VJ-X3l" id="mbP-Ar-A1u">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cn0-O5-DdC">
+                                                    <rect key="frame" x="96" y="11" width="226" height="28"/>
+                                                    <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.37647058820000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Car" translatesAutoresizingMaskIntoConstraints="NO" id="Zgu-6W-1he">
+                                                    <rect key="frame" x="8" y="1" width="67" height="46"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="67" id="hom-8T-iov"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Zgu-6W-1he" firstAttribute="centerY" secondItem="mbP-Ar-A1u" secondAttribute="centerY" id="6K5-Eu-fXj"/>
+                                                <constraint firstItem="cn0-O5-DdC" firstAttribute="top" secondItem="mbP-Ar-A1u" secondAttribute="topMargin" constant="3" id="7bH-uj-JSV"/>
+                                                <constraint firstItem="cn0-O5-DdC" firstAttribute="centerY" secondItem="mbP-Ar-A1u" secondAttribute="centerY" id="931-e2-lUh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="cn0-O5-DdC" secondAttribute="trailing" constant="12" id="Em6-Hl-3Kg"/>
+                                                <constraint firstItem="cn0-O5-DdC" firstAttribute="leading" secondItem="Zgu-6W-1he" secondAttribute="trailing" constant="21" id="Pbi-wW-slW"/>
+                                                <constraint firstItem="Zgu-6W-1he" firstAttribute="leading" secondItem="mbP-Ar-A1u" secondAttribute="leadingMargin" id="qlo-qv-poA"/>
+                                                <constraint firstItem="Zgu-6W-1he" firstAttribute="top" secondItem="mbP-Ar-A1u" secondAttribute="topMargin" constant="-7" id="tfn-qE-Vep"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="cn0-O5-DdC" id="VcE-Pf-Nnh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Sle-Sb-ykq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="XpH-tW-S5J"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="V66-4g-1FY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9GV-21-en7"/>
+                            <constraint firstItem="V66-4g-1FY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FT9-V3-SKO"/>
+                            <constraint firstAttribute="trailing" secondItem="V66-4g-1FY" secondAttribute="trailing" id="Lw1-hv-WxE"/>
+                            <constraint firstItem="V66-4g-1FY" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="bc6-Xp-umZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QjM-ck-Opn"/>
+                    <connections>
+                        <outlet property="tableView" destination="V66-4g-1FY" id="0dr-Af-Spg"/>
+                        <outlet property="tableViewFooter" destination="bju-Vc-anI" id="dUn-vh-eNc"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="FRC-bm-8mj"/>
+                        <segue destination="QHy-pP-FbR" kind="show" identifier="Detail" id="59v-Fn-ePq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="133.5832083958021"/>
+        </scene>
+        <!--Car Brand View Controller-->
+        <scene sceneID="2l9-hF-bU1">
+            <objects>
+                <viewController storyboardIdentifier="carBrand" id="QHy-pP-FbR" customClass="CarBrandViewController" customModule="CarTest_17" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n2P-v6-pc1"/>
+                        <viewControllerLayoutGuide type="bottom" id="0lp-cH-7FJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yhn-c4-Gly">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="asK-BV-Dyv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="rnX-oh-Vtg" customClass="MyFooter" customModule="CarTest_17" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="138" width="375" height="72"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="GbY-2G-cGl">
+                                            <rect key="frame" x="130" y="12" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wg-XO-vTT">
+                                            <rect key="frame" x="168" y="11" width="77" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="77" id="niR-Ig-65X"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="GbY-2G-cGl" firstAttribute="bottom" secondItem="4Wg-XO-vTT" secondAttribute="bottom" id="1iC-WB-i73"/>
+                                        <constraint firstItem="4Wg-XO-vTT" firstAttribute="top" secondItem="rnX-oh-Vtg" secondAttribute="top" constant="11" id="rfV-hs-OPq"/>
+                                        <constraint firstItem="4Wg-XO-vTT" firstAttribute="leading" secondItem="GbY-2G-cGl" secondAttribute="trailing" constant="18" id="spa-L9-Qhd"/>
+                                        <constraint firstItem="GbY-2G-cGl" firstAttribute="leading" secondItem="rnX-oh-Vtg" secondAttribute="leading" constant="130" id="wM1-mV-zXB"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="activityIndicator" destination="GbY-2G-cGl" id="XS1-gm-eUz"/>
+                                    </connections>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CarsTableViewCell" id="owH-0f-jwj" customClass="carListTableViewCell" customModule="CarTest_17" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="owH-0f-jwj" id="zLF-fe-mB2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qP-od-OqB">
+                                                    <rect key="frame" x="58" y="9" width="259" height="27"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="19"/>
+                                                    <color key="textColor" red="0.0" green="0.37647058820000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8qP-od-OqB" firstAttribute="centerY" secondItem="zLF-fe-mB2" secondAttribute="centerY" id="7Oo-UP-YNg"/>
+                                                <constraint firstItem="8qP-od-OqB" firstAttribute="centerX" secondItem="zLF-fe-mB2" secondAttribute="centerX" id="UQ6-Fg-gpZ"/>
+                                                <constraint firstItem="8qP-od-OqB" firstAttribute="top" secondItem="zLF-fe-mB2" secondAttribute="topMargin" constant="1" id="XLZ-yh-m2O"/>
+                                                <constraint firstItem="8qP-od-OqB" firstAttribute="leading" secondItem="zLF-fe-mB2" secondAttribute="leadingMargin" constant="50" id="fgD-AS-zT3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="8qP-od-OqB" id="oup-Y9-meG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="QHy-pP-FbR" id="MLj-Vq-49y"/>
+                                    <outlet property="delegate" destination="QHy-pP-FbR" id="Cr2-pu-BpS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="asK-BV-Dyv" firstAttribute="top" secondItem="yhn-c4-Gly" secondAttribute="top" id="Hps-fH-dH0"/>
+                            <constraint firstItem="asK-BV-Dyv" firstAttribute="leading" secondItem="yhn-c4-Gly" secondAttribute="leading" id="pLn-Mi-cJA"/>
+                            <constraint firstAttribute="trailing" secondItem="asK-BV-Dyv" secondAttribute="trailing" id="qlh-af-vYP"/>
+                            <constraint firstItem="asK-BV-Dyv" firstAttribute="bottom" secondItem="0lp-cH-7FJ" secondAttribute="top" id="xFM-dU-i1d"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Oi4-mf-uDT"/>
+                    <connections>
+                        <outlet property="tableView" destination="asK-BV-Dyv" id="9VO-Rj-m8D"/>
+                        <outlet property="tableViewFooter" destination="rnX-oh-Vtg" id="Fdu-F5-AQa"/>
+                        <outlet property="view" destination="yhn-c4-Gly" id="rX0-dg-Vv1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rrb-HB-Oiv" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1660" y="134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kyO-AX-2Kd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sW6-fw-waf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RRr-q9-Qpv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eWS-yk-5dr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yST-I5-7jT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="135.38230884557723"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Car" width="128" height="128"/>
+    </resources>
+</document>
